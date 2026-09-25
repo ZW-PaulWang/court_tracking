@@ -1,0 +1,47 @@
+name: Refresh court data
+
+# MANUAL ONLY, on purpose.
+#
+# The daily local task is the single writer: it scrapes both portals, rewrites every file in
+# data/, commits and pushes. If this workflow also committed data/rec.json on a schedule, the
+# two writers would race and the daily push would start failing as a non-fast-forward.
+#
+# Kept here as a fallback: run it from the Actions tab to refresh the Harvard Recreation half
+# without a local run. Re-enable the cron only if the daily task stops owning data/rec.json.
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Scrape Harvard Recreation
+        run: python scripts/scrape_rec.py
+
+      - name: Commit if the data changed
+        run: |
+          git config user.name  "court-watch-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/rec.json
+          if git diff --staged --quiet; then
+            echo "No change in availability."
+          else
+            git commit -m "Refresh Harvard Rec availability"
+            git push
+          fi

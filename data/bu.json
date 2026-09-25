@@ -1,0 +1,17 @@
+{
+ "source": "BU FitRec",
+ "url": "https://myfitrec.bu.edu/webtrac/web/search.html?keyword=ttc&module=ar",
+ "venues": [
+  {
+   "code": "U",
+   "name": "BU FitRec"
+  }
+ ],
+ "scraped": "2026-09-25T15:14:16-04:00",
+ "window": {
+  "from": "2026-09-25",
+  "to": "2026-09-27"
+ },
+ "note": "BU releases courts 48 hours ahead. Its calendar labels everything else 'Unavailable', which conflates 'already booked' with 'not released yet', so only the 48-hour window is treated as released. Census this scrape: 342 blocks across 63 days, all 'block-status error :: Unavailable'. No new census keys.",
+ "slots": []
+}
