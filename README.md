@@ -1,4 +1,4 @@
-# Crimson Court Watch
+# Paul's Court Watch
 
 One calendar for open tennis courts across Harvard's booking portals. Static site, no backend.
 

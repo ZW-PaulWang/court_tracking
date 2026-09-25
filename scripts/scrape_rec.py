@@ -24,7 +24,7 @@ programs = {  # Fusion program ids -> (venue code, court label)
 }
 
 session = requests.Session()
-session.headers.update({"User-Agent": "crimson-court-watch (github.com/ZW-PaulWang/court_tracking)"})
+session.headers.update({"User-Agent": "pauls-court-watch (github.com/ZW-PaulWang/court_tracking)"})
 
 # 1. Helpers. Fusion posts the whole appointment array back, so values need its own string encoding.
 def form_value(v):
