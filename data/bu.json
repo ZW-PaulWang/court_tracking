@@ -7,11 +7,11 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-09-25T16:08:36-04:00",
+ "scraped": "2026-09-26T10:49:00-04:00",
  "window": {
-  "from": "2026-09-25",
-  "to": "2026-09-27"
+  "from": "2026-09-26",
+  "to": "2026-09-28"
  },
- "note": "BU releases courts 48 hours ahead. Its calendar labels everything else 'Unavailable', which conflates 'already booked' with 'not released yet', so only the 48-hour window is treated as released. Census this scrape: 342 blocks across 63 days, all 'block-status error :: Unavailable'. No new census keys.",
+ "note": "Census over 63 rendered days: 342 blocks, all 'block-status error :: Unavailable'. No open slots. BU marks a block Unavailable whether booked or beyond its 48h release, so the released window is today..today+2.",
  "slots": []
 }
