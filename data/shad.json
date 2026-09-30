@@ -7,119 +7,15 @@
    "name": "Shad Hall"
   }
  ],
- "scraped": "2026-09-29T12:45:34-04:00",
+ "scraped": "2026-09-30T08:42:32-04:00",
  "window": {
-  "from": "2026-09-29",
-  "to": "2026-10-01"
+  "from": "2026-09-30",
+  "to": "2026-10-02"
  },
  "slots": [
   {
    "v": "S",
    "court": "Court 2",
-   "date": "2026-09-29",
-   "start": 720,
-   "end": 780,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 3",
-   "date": "2026-09-29",
-   "start": 720,
-   "end": 780,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 4",
-   "date": "2026-09-29",
-   "start": 720,
-   "end": 780,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 1",
-   "date": "2026-09-29",
-   "start": 780,
-   "end": 840,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 2",
-   "date": "2026-09-29",
-   "start": 780,
-   "end": 840,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 3",
-   "date": "2026-09-29",
-   "start": 780,
-   "end": 840,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 4",
-   "date": "2026-09-29",
-   "start": 780,
-   "end": 840,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 2",
-   "date": "2026-09-29",
-   "start": 840,
-   "end": 900,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 4",
-   "date": "2026-09-29",
-   "start": 840,
-   "end": 900,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 2",
-   "date": "2026-09-29",
-   "start": 1140,
-   "end": 1200,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 3",
-   "date": "2026-09-29",
-   "start": 1140,
-   "end": 1200,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 4",
-   "date": "2026-09-29",
-   "start": 1140,
-   "end": 1200,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 3",
-   "date": "2026-09-30",
-   "start": 420,
-   "end": 480,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 2",
    "date": "2026-09-30",
    "start": 480,
    "end": 540,
@@ -143,14 +39,6 @@
   },
   {
    "v": "S",
-   "court": "Court 3",
-   "date": "2026-09-30",
-   "start": 600,
-   "end": 660,
-   "open": 1
-  },
-  {
-   "v": "S",
    "court": "Court 4",
    "date": "2026-09-30",
    "start": 600,
@@ -195,14 +83,6 @@
    "date": "2026-09-30",
    "start": 780,
    "end": 840,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 1",
-   "date": "2026-09-30",
-   "start": 1140,
-   "end": 1200,
    "open": 1
   },
   {
@@ -247,14 +127,6 @@
   },
   {
    "v": "S",
-   "court": "Court 1",
-   "date": "2026-10-01",
-   "start": 480,
-   "end": 540,
-   "open": 1
-  },
-  {
-   "v": "S",
    "court": "Court 3",
    "date": "2026-10-01",
    "start": 480,
@@ -399,23 +271,7 @@
   },
   {
    "v": "S",
-   "court": "Court 1",
-   "date": "2026-10-01",
-   "start": 840,
-   "end": 900,
-   "open": 1
-  },
-  {
-   "v": "S",
    "court": "Court 3",
-   "date": "2026-10-01",
-   "start": 840,
-   "end": 900,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 4",
    "date": "2026-10-01",
    "start": 840,
    "end": 900,
@@ -425,14 +281,198 @@
    "v": "S",
    "court": "Court 1",
    "date": "2026-10-01",
-   "start": 900,
-   "end": 960,
+   "start": 1140,
+   "end": 1200,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-01",
+   "start": 1140,
+   "end": 1200,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-01",
+   "start": 1140,
+   "end": 1200,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 1",
+   "date": "2026-10-02",
+   "start": 420,
+   "end": 480,
    "open": 1
   },
   {
    "v": "S",
    "court": "Court 2",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
+   "start": 420,
+   "end": 480,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 420,
+   "end": 480,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-02",
+   "start": 420,
+   "end": 480,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 1",
+   "date": "2026-10-02",
+   "start": 480,
+   "end": 540,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 2",
+   "date": "2026-10-02",
+   "start": 480,
+   "end": 540,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 480,
+   "end": 540,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-02",
+   "start": 480,
+   "end": 540,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 540,
+   "end": 600,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-02",
+   "start": 540,
+   "end": 600,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 600,
+   "end": 660,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-02",
+   "start": 600,
+   "end": 660,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 1",
+   "date": "2026-10-02",
+   "start": 720,
+   "end": 780,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 2",
+   "date": "2026-10-02",
+   "start": 720,
+   "end": 780,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 720,
+   "end": 780,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-02",
+   "start": 720,
+   "end": 780,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 1",
+   "date": "2026-10-02",
+   "start": 780,
+   "end": 840,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 2",
+   "date": "2026-10-02",
+   "start": 780,
+   "end": 840,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 780,
+   "end": 840,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 4",
+   "date": "2026-10-02",
+   "start": 780,
+   "end": 840,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
+   "start": 840,
+   "end": 900,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
    "start": 900,
    "end": 960,
    "open": 1
@@ -440,47 +480,23 @@
   {
    "v": "S",
    "court": "Court 3",
-   "date": "2026-10-01",
-   "start": 900,
-   "end": 960,
+   "date": "2026-10-02",
+   "start": 960,
+   "end": 1020,
    "open": 1
   },
   {
    "v": "S",
-   "court": "Court 4",
-   "date": "2026-10-01",
-   "start": 900,
-   "end": 960,
+   "court": "Court 1",
+   "date": "2026-10-02",
+   "start": 1020,
+   "end": 1080,
    "open": 1
   },
   {
    "v": "S",
    "court": "Court 2",
-   "date": "2026-10-01",
-   "start": 960,
-   "end": 1020,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 3",
-   "date": "2026-10-01",
-   "start": 960,
-   "end": 1020,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 4",
-   "date": "2026-10-01",
-   "start": 960,
-   "end": 1020,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 2",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
    "start": 1020,
    "end": 1080,
    "open": 1
@@ -488,31 +504,31 @@
   {
    "v": "S",
    "court": "Court 3",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
    "start": 1020,
    "end": 1080,
    "open": 1
   },
   {
    "v": "S",
-   "court": "Court 4",
-   "date": "2026-10-01",
-   "start": 1020,
-   "end": 1080,
-   "open": 1
-  },
-  {
-   "v": "S",
-   "court": "Court 3",
-   "date": "2026-10-01",
+   "court": "Court 1",
+   "date": "2026-10-02",
    "start": 1080,
    "end": 1140,
    "open": 1
   },
   {
    "v": "S",
-   "court": "Court 4",
-   "date": "2026-10-01",
+   "court": "Court 2",
+   "date": "2026-10-02",
+   "start": 1080,
+   "end": 1140,
+   "open": 1
+  },
+  {
+   "v": "S",
+   "court": "Court 3",
+   "date": "2026-10-02",
    "start": 1080,
    "end": 1140,
    "open": 1
@@ -520,7 +536,7 @@
   {
    "v": "S",
    "court": "Court 1",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
    "start": 1140,
    "end": 1200,
    "open": 1
@@ -528,7 +544,7 @@
   {
    "v": "S",
    "court": "Court 2",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
    "start": 1140,
    "end": 1200,
    "open": 1
@@ -536,7 +552,7 @@
   {
    "v": "S",
    "court": "Court 3",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
    "start": 1140,
    "end": 1200,
    "open": 1
@@ -544,7 +560,7 @@
   {
    "v": "S",
    "court": "Court 4",
-   "date": "2026-10-01",
+   "date": "2026-10-02",
    "start": 1140,
    "end": 1200,
    "open": 1
