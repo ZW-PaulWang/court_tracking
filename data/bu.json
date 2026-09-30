@@ -7,11 +7,28 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-09-29T07:15:09-04:00",
+ "scraped": "2026-09-30T07:13:51-04:00",
  "window": {
-  "from": "2026-09-29",
-  "to": "2026-10-01"
+  "from": "2026-09-30",
+  "to": "2026-10-02"
  },
- "note": "Census unchanged: 342 of 342 blocks over 63 rendered days read 'block-status error :: Unavailable'; no other census key. BU marks a block Unavailable whether booked or beyond its 48h release, so the released window is today..today+2 and zero open slots is the expected result.",
- "slots": []
+ "note": "CENSUS CHANGED: 342 blocks over 63 rendered days returned two keys, not one. 340 read 'block-status error :: Unavailable' (booked or beyond BU's 48h release) and 2 read 'multi-select block-status success :: 2 of 3 Available' on 2026-10-01 10:00-11:00 and 11:00-12:00. These are the first open BU blocks ever observed; open recorded as 2 from the '2 of 3' label. Released window remains today..today+2.",
+ "slots": [
+  {
+   "v": "U",
+   "court": "Tennis",
+   "date": "2026-10-01",
+   "start": 600,
+   "end": 660,
+   "open": 2
+  },
+  {
+   "v": "U",
+   "court": "Tennis",
+   "date": "2026-10-01",
+   "start": 660,
+   "end": 720,
+   "open": 2
+  }
+ ]
 }
