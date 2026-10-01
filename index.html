@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Paul's Court Watch</title>
-<meta name="description" content="Open tennis slots across Shad Hall, Murr Indoor and Beren, scraped from the Harvard booking portals.">
+<meta name="description" content="Open tennis court slots across the Harvard and BU booking portals, in one grid.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text y='26' font-size='26'>%F0%9F%8E%BE</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -239,7 +239,7 @@ footer a:hover{color:var(--fg)}
         <path d="M3 9 q10 -9 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0"
               stroke="#F472B6" stroke-width="4" stroke-linecap="round"/>
       </svg>
-      <p class="lede">Every <b>bookable</b> tennis slot at Shad Hall, Murr Indoor and Beren, in one grid. Taken and blocked times are left out, so what you see is what you can grab.</p>
+      <p class="lede" id="lede">Every <b>bookable</b> tennis slot, in one grid. Taken and blocked times are left out, so what you see is what you can grab.</p>
     </div>
   </header>
 
@@ -249,7 +249,7 @@ footer a:hover{color:var(--fg)}
 
   <div class="sources" id="sources"></div>
 
-  <p class="notice">The two portals release different distances ahead: <b>Shad opens a rolling 3&#8209;day window</b>, Harvard Recreation a rolling 7&#8209;day one. Striped columns are days a venue has not released yet &mdash; not days it is full.</p>
+  <p class="notice" id="notice"></p>
 
   <div class="board">
     <div class="scroller">
@@ -268,8 +268,8 @@ footer a:hover{color:var(--fg)}
   </div>
 
   <footer>
-    Click any slot to open its booking page. Beren courts 16 &amp; 17 are sold as one reservation carrying 2 spots; Murr Court&nbsp;6 runs 90&#8209;minute blocks while every other court is hourly.<br>
-    Sources: <a href="https://shad.hbs.edu/booking/6be4b049-3715-4514-9c21-f0cb25128432">Shad Hall Fitness Portal</a> (HBS login required to book) &middot; <a href="https://membership.gocrimson.com/program?classificationId=dc42ec33-82df-44ca-b06c-109c3685395d">Harvard Recreation</a>. Availability changes constantly &mdash; confirm on the portal before counting on a slot.
+    Click any slot to open its booking page. <span id="quirks"></span><br>
+    Sources: <span id="srclinks"></span> Availability changes constantly &mdash; confirm on the portal before counting on a slot.
   </footer>
 </div>
 
@@ -339,6 +339,74 @@ function prepare(docs){
 }
 
 const visible = () => SLOTS.filter(s => active[s.v]);
+
+/* ------------------------------------------------------------
+   Prose generated from the data files. Nothing below states a
+   venue name, a window length or a court quirk as a literal —
+   every claim is recomputed from whatever the scrapers wrote,
+   so the copy cannot drift from the data.
+   ------------------------------------------------------------ */
+
+const human = list => list.length < 2 ? (list[0] || "")
+  : list.slice(0,-1).join(", ") + " and " + list[list.length-1];
+
+const spanDays = w => w && w.from && w.to
+  ? Math.round((dayOf(w.to) - dayOf(w.from)) / 864e5) + 1 : null;
+
+function renderLede(){
+  const names = DOCS.flatMap(d => (d.venues || []).map(v => v.name));
+  const el = document.getElementById("lede");
+  if (!el || !names.length) return;
+  el.innerHTML = "Every <b>bookable</b> tennis slot at " + human([...new Set(names)]) +
+    ", in one grid. Taken and blocked times are left out, so what you see is what you can grab.";
+}
+
+function renderNotice(){
+  const el = document.getElementById("notice");
+  if (!el) return;
+  // 0. Describe each portal's release depth from its own window, and surface any note the scraper left.
+  const parts = DOCS.map(d => {
+    const n = spanDays(d.window);
+    return n ? "<b>" + d.source + "</b> " + n + "&nbsp;day" + (n === 1 ? "" : "s") : null;
+  }).filter(Boolean);
+  const notes = DOCS.filter(d => d.note).map(d => d.note);
+  let html = "";
+  if (parts.length > 1) html += "The portals release different distances ahead: " + human(parts) +
+    ". Striped columns are days a venue has not released yet, not days it is full.";
+  else if (parts.length) html += parts[0] + " of availability is released. Striped columns are days not released yet.";
+  if (notes.length) html += " " + notes.join(" ");
+  el.innerHTML = html;
+}
+
+function renderQuirks(){
+  const el = document.getElementById("quirks");
+  if (!el) return;
+  // 1. Derive the oddities instead of asserting them: non-hourly blocks, and courts selling >1 spot.
+  const bits = [];
+  const durs = {};
+  SLOTS.forEach(s => {
+    const k = VENUE[s.v] ? VENUE[s.v].name + " " + s.court : s.court;
+    (durs[k] = durs[k] || new Set()).add(s.end - s.start);
+  });
+  const odd = Object.entries(durs)
+    .filter(([, set]) => [...set].some(d => d !== 60))
+    .map(([k, set]) => k + " runs " + human([...set].sort((a,b) => a-b).map(d => d + "&#8209;minute")) + " blocks");
+  if (odd.length) bits.push(human(odd) + (Object.keys(durs).length > odd.length ? ", while the rest are hourly" : ""));
+
+  const multi = [...new Set(SLOTS.filter(s => s.open > 1)
+    .map(s => (VENUE[s.v] ? VENUE[s.v].name + " " + s.court : s.court)))];
+  if (multi.length) bits.push(human(multi) + (multi.length > 1 ? " are" : " is") +
+    " sold as one reservation carrying more than one spot");
+
+  el.innerHTML = bits.length ? bits.join("; ") + "." : "";
+}
+
+function renderSourceLinks(){
+  const el = document.getElementById("srclinks");
+  if (!el) return;
+  el.innerHTML = DOCS.map(d =>
+    '<a href="' + (d.url || "#") + '">' + d.source + '</a>').join(" &middot; ") + ".";
+}
 
 function renderSources(){
   const now = Date.now();
@@ -461,10 +529,14 @@ load().then(docs => {
   if (!prepare(docs)){
     document.getElementById("grid").style.display = "none";
     document.getElementById("state").innerHTML =
-      "<b>No data yet</b>The scrapers have not written data/rec.json or data/shad.json.";
+      "<b>No data yet</b>The scrapers have not written " + FILES.join(", ") + ".";
     return;
   }
   renderControls();
+  renderLede();
+  renderNotice();
+  renderQuirks();
+  renderSourceLinks();
   renderSources();
   renderTallies();
   renderGrid();
