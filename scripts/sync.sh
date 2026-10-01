@@ -30,7 +30,8 @@ for f in index.html README.md requirements.txt .gitignore; do
 done
 mkdir -p "$work/repo/data" "$work/repo/scripts" "$work/repo/.github/workflows"
 cp "$repo"/data/*.json           "$work/repo/data/"            2>/dev/null
-cp "$repo"/scripts/*.py "$repo"/scripts/*.sh "$work/repo/scripts/" 2>/dev/null
+# Copy scripts/ as a tree, so subdirectories like scripts/scrape/ are not silently dropped.
+cp -R "$repo"/scripts/.            "$work/repo/scripts/"        2>/dev/null
 cp "$repo"/.github/workflows/*.yml "$work/repo/.github/workflows/" 2>/dev/null
 
 cd "$work/repo"
