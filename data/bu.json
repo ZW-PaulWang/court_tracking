@@ -7,34 +7,26 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-10-01T08:43:30-04:00",
+ "scraped": "2026-10-02T07:13:43-04:00",
  "window": {
-  "from": "2026-10-01",
-  "to": "2026-10-03"
+  "from": "2026-10-02",
+  "to": "2026-10-04"
  },
  "slots": [
   {
    "v": "U",
    "court": "Tennis Reservations",
-   "date": "2026-10-01",
-   "start": 600,
-   "end": 660,
+   "date": "2026-10-03",
+   "start": 1140,
+   "end": 1200,
    "open": 1
   },
   {
    "v": "U",
    "court": "Tennis Reservations",
-   "date": "2026-10-02",
-   "start": 600,
-   "end": 660,
-   "open": 1
-  },
-  {
-   "v": "U",
-   "court": "Tennis Reservations",
-   "date": "2026-10-02",
-   "start": 660,
-   "end": 720,
+   "date": "2026-10-03",
+   "start": 1260,
+   "end": 1320,
    "open": 1
   }
  ],
@@ -42,8 +34,8 @@
  "census": {
   "days": 70,
   "blocks": {
-   "block-status error :: Unavailable": 377,
-   "multi-select block-status success :: 1 of 3 Available": 3
+   "block-status error :: Unavailable": 378,
+   "multi-select block-status success :: 1 of 3 Available": 2
   }
  }
 }
