@@ -7,35 +7,36 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-10-02T07:13:43-04:00",
+ "scraped": "2026-10-05T07:59:27-04:00",
  "window": {
-  "from": "2026-10-02",
-  "to": "2026-10-04"
+  "from": "2026-10-05",
+  "to": "2026-10-07"
+ },
+ "note": "BU marks a block Unavailable whether it is already booked or simply not yet released, so only the next three days can be shown.",
+ "census": {
+  "days": 70,
+  "blocks": {
+   "block-status error :: Unavailable": 378,
+   "multi-select block-status success :: 3 of 3 Available": 1,
+   "multi-select block-status success :: 2 of 3 Available": 1
+  }
  },
  "slots": [
   {
    "v": "U",
    "court": "Tennis Reservations",
-   "date": "2026-10-03",
-   "start": 1140,
-   "end": 1200,
-   "open": 1
+   "date": "2026-10-06",
+   "start": 600,
+   "end": 660,
+   "open": 3
   },
   {
    "v": "U",
    "court": "Tennis Reservations",
-   "date": "2026-10-03",
-   "start": 1260,
-   "end": 1320,
-   "open": 1
+   "date": "2026-10-06",
+   "start": 660,
+   "end": 720,
+   "open": 2
   }
- ],
- "note": "BU labels a block Unavailable whether it is booked or simply more than 48 hours out, so only a 48-hour window is ever treated as released.",
- "census": {
-  "days": 70,
-  "blocks": {
-   "block-status error :: Unavailable": 378,
-   "multi-select block-status success :: 1 of 3 Available": 2
-  }
- }
+ ]
 }
