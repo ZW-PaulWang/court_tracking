@@ -7,17 +7,17 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-10-05T07:59:27-04:00",
+ "scraped": "2026-10-06T08:07:32-04:00",
  "window": {
-  "from": "2026-10-05",
-  "to": "2026-10-07"
+  "from": "2026-10-06",
+  "to": "2026-10-08"
  },
- "note": "BU marks a block Unavailable whether it is already booked or simply not yet released, so only the next three days can be shown.",
+ "note": "BU marks a block Unavailable whether it is already booked or simply not released yet, so only the next three days can be shown as reliable.",
  "census": {
   "days": 70,
   "blocks": {
    "block-status error :: Unavailable": 378,
-   "multi-select block-status success :: 3 of 3 Available": 1,
+   "multi-select block-status success :: 1 of 3 Available": 1,
    "multi-select block-status success :: 2 of 3 Available": 1
   }
  },
@@ -28,7 +28,7 @@
    "date": "2026-10-06",
    "start": 600,
    "end": 660,
-   "open": 3
+   "open": 1
   },
   {
    "v": "U",
