@@ -7,10 +7,10 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-10-14T12:04:44+00:00",
+ "scraped": "2026-10-15T12:50:00+00:00",
  "window": {
-  "from": "2026-10-14",
-  "to": "2026-10-16"
+  "from": "2026-10-15",
+  "to": "2026-10-17"
  },
  "note": "BU marks a block Unavailable whether it is already booked or simply not yet released, so only the next three days can be shown as reliable.",
  "census": {
