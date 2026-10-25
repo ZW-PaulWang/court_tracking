@@ -11,18 +11,18 @@
    "name": "Beren"
   }
  ],
- "scraped": "2026-10-24T11:03:01+00:00",
+ "scraped": "2026-10-25T11:50:44+00:00",
  "window": {
   "from": "2026-10-25",
-  "to": "2026-10-30"
+  "to": "2026-10-31"
  },
  "slots": [
   {
    "v": "M",
-   "court": "Court 2",
+   "court": "Court 6",
    "date": "2026-10-25",
-   "start": 960,
-   "end": 1020,
+   "start": 840,
+   "end": 930,
    "open": 1
   },
   {
@@ -795,26 +795,50 @@
   },
   {
    "v": "M",
-   "court": "Court 4",
-   "date": "2026-10-30",
-   "start": 1170,
-   "end": 1230,
+   "court": "Court 1",
+   "date": "2026-10-31",
+   "start": 540,
+   "end": 600,
+   "open": 1
+  },
+  {
+   "v": "M",
+   "court": "Court 2",
+   "date": "2026-10-31",
+   "start": 540,
+   "end": 600,
    "open": 1
   },
   {
    "v": "M",
    "court": "Court 3",
-   "date": "2026-10-30",
-   "start": 1230,
-   "end": 1290,
+   "date": "2026-10-31",
+   "start": 540,
+   "end": 600,
    "open": 1
   },
   {
    "v": "M",
    "court": "Court 4",
-   "date": "2026-10-30",
-   "start": 1230,
-   "end": 1290,
+   "date": "2026-10-31",
+   "start": 540,
+   "end": 600,
+   "open": 1
+  },
+  {
+   "v": "M",
+   "court": "Court 2",
+   "date": "2026-10-31",
+   "start": 930,
+   "end": 990,
+   "open": 1
+  },
+  {
+   "v": "M",
+   "court": "Court 3",
+   "date": "2026-10-31",
+   "start": 930,
+   "end": 990,
    "open": 1
   }
  ]
