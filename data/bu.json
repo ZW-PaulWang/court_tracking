@@ -7,17 +7,27 @@
    "name": "BU FitRec"
   }
  ],
- "scraped": "2026-11-10T07:08:00-05:00",
+ "scraped": "2026-11-11T07:10:00-05:00",
  "window": {
-  "from": "2026-11-10",
-  "to": "2026-11-12"
+  "from": "2026-11-11",
+  "to": "2026-11-13"
  },
  "note": "BU marks a block Unavailable whether it is already booked or simply not yet released, so only the next three days can be shown as reliable.",
  "census": {
   "days": 63,
   "blocks": {
-   "block-status error :: Unavailable": 199
+   "block-status error :: Unavailable": 197,
+   "multi-select block-status success :: 1 of 3 Available": 1
   }
  },
- "slots": []
+ "slots": [
+  {
+   "v": "U",
+   "court": "Tennis Reservations",
+   "date": "2026-11-12",
+   "start": 540,
+   "end": 600,
+   "open": 1
+  }
+ ]
 }
